@@ -2,6 +2,14 @@ apply from: "javafx.plugin"
 
 sourceCompatibility = 1.8
 
-group = "me.topplethenun.java"
-archivesBaseName = "finalproject-gradle"
+group = "com.tealcube.java.cnu"
+archivesBaseName = "cpsc425finalproject"
 version = "0.0.1-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.controlsfx:controlsfx:8.20.8"
+}
