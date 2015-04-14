@@ -12,4 +12,5 @@ repositories {
 
 dependencies {
     compile "org.controlsfx:controlsfx:8.20.8"
+    compile files("libs/3DViewer.jar")
 }
