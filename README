@@ -7,6 +7,11 @@ Scene Editor is a project written for CPSC 425 at Christopher Newport University
 The goal of the assignment was to create a JavaFX application that displayed
 multiple objects in a 3D space.
 
+### How to Acquire
+Either download the most recent release from the release section above, download
+the source zip to the right, or use Git:
+    git clone https://github.com/Nunnery/cpsc425final.git
+
 ### How to Compile
 # Windows
 Simply double click "gradlew.bat" in the root directory or run it from Command Prompt.
