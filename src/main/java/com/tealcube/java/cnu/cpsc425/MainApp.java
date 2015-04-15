@@ -2,14 +2,12 @@ package com.tealcube.java.cnu.cpsc425;
 
 import com.javafx.experiments.jfx3dviewer.Xform;
 import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.PerspectiveCamera;
-import javafx.scene.Scene;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.*;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Box;
-import javafx.scene.shape.Cylinder;
-import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,10 +16,13 @@ public class MainApp extends Application {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MainApp.class);
     private Stage primaryStage;
+    private BorderPane base;
+    private SubScene subScene;
     private final Group root3D = new Group();
     private final Group axisGroup = new Group();
     private final Xform world = new Xform();
     private final Xform carGroup = new Xform();
+    private final Xform worldGroup = new Xform();
     private final PerspectiveCamera camera = new PerspectiveCamera(true);
     private final Xform cameraXform = new Xform();
     private final Xform cameraXform2 = new Xform();
@@ -39,24 +40,30 @@ public class MainApp extends Application {
 
         getLogger().debug("Application starting");
 
+        FXMLLoader loader = new FXMLLoader();
+        base = loader.load(MainApp.class.getResourceAsStream("SceneEditor.fxml"));
+
+        subScene = new SubScene(world, 690, 600, true, SceneAntialiasing.BALANCED);
+        base.setCenter(subScene);
+
         buildScene();
         buildCamera();
         buildAxes();
         buildCars();
 
-        Scene scene = new Scene(root3D, 800, 600, true);
+        Scene scene = new Scene(base, 800, 600, true);
         scene.setFill(Color.GREY);
 
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
-        scene.setCamera(camera);
+        subScene.setCamera(camera);
 
         getLogger().debug("Application started");
     }
 
     private void buildCars() {
         getLogger().debug("Building cars");
-        world.getChildren().add(new Car(50, 0, 0));
+        world.getChildren().add(carGroup);
         getLogger().debug("Cars built");
     }
 
@@ -111,6 +118,10 @@ public class MainApp extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public Xform getCarGroup() {
+        return carGroup;
     }
 
 }
