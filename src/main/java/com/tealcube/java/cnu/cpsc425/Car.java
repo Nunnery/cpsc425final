@@ -22,7 +22,7 @@ public class Car extends Group {
         material.setDiffuseColor(Color.rgb(RANDOM.nextInt(255), RANDOM.nextInt(255), RANDOM.nextInt(255)));
         material.setSpecularColor(Color.rgb(RANDOM.nextInt(255), RANDOM.nextInt(255), RANDOM.nextInt(255)));
 
-        Cylinder body = new Cylinder(5, 50);
+        Cylinder body = new Cylinder(5, 30);
         body.setMaterial(material);
         body.setTranslateX(x);
         body.setTranslateY(y);
@@ -32,7 +32,7 @@ public class Car extends Group {
 
         Cylinder front = new Cylinder(3, 15);
         front.setMaterial(material);
-        front.setTranslateX(x + 20);
+        front.setTranslateX(x + 10);
         front.setTranslateY(y - 3);
         front.setTranslateZ(z);
         front.setRotationAxis(Rotate.X_AXIS);
@@ -40,7 +40,7 @@ public class Car extends Group {
 
         Cylinder back = new Cylinder(3, 15);
         back.setMaterial(material);
-        back.setTranslateX(x - 20);
+        back.setTranslateX(x - 10);
         back.setTranslateY(y - 3);
         back.setTranslateZ(z);
         back.setRotationAxis(Rotate.X_AXIS);
