@@ -13,6 +13,8 @@ the source zip to the right, or use Git:
     git clone https://github.com/Nunnery/cpsc425final.git
 
 ### How to Compile
+Ensure that you have JavaFX in the classpath for your JDK installation. Afterwards,
+follow the below instructions.
 # Windows
 Simply double click "gradlew.bat" in the root directory or run it from Command Prompt.
 # *NIX (including Mac)
