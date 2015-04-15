@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MainApp extends Application {
+public class Main extends Application {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(MainApp.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     private Stage primaryStage;
     private BorderPane base;
     private SubScene subScene;
@@ -45,9 +45,9 @@ public class MainApp extends Application {
         getLogger().debug("Application starting");
 
         FXMLLoader loader = new FXMLLoader();
-        base = loader.load(MainApp.class.getResourceAsStream("SceneEditor.fxml"));
+        base = loader.load(Main.class.getResourceAsStream("SceneEditor.fxml"));
         SceneEditorController controller = loader.getController();
-        controller.setMainApp(this);
+        controller.setMain(this);
 
         subScene = new SubScene(world, 690, 600, true, SceneAntialiasing.BALANCED);
         base.setCenter(subScene);
