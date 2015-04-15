@@ -33,6 +33,10 @@ public class MainApp extends Application {
         return LOGGER;
     }
 
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
@@ -42,6 +46,8 @@ public class MainApp extends Application {
 
         FXMLLoader loader = new FXMLLoader();
         base = loader.load(MainApp.class.getResourceAsStream("SceneEditor.fxml"));
+        SceneEditorController controller = loader.getController();
+        controller.setMainApp(this);
 
         subScene = new SubScene(world, 690, 600, true, SceneAntialiasing.BALANCED);
         base.setCenter(subScene);

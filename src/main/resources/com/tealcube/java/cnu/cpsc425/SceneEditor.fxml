@@ -5,17 +5,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tealcube.java.cnu.cpsc425.SceneEditorController">
    <right>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="110.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="110.0" text="Car" />
+            <Button mnemonicParsing="false" onMouseClicked="#addCar" prefHeight="70.0" prefWidth="110.0" text="Car" />
             <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="110.0" text="House" />
-            <Button layoutX="10.0" layoutY="80.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="110.0" text="Delete Car" />
+            <Button layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#removeCar" prefHeight="70.0" prefWidth="110.0" text="Delete Car" />
             <Button layoutX="10.0" layoutY="150.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="110.0" text="Delete House" />
             <Button layoutX="10.0" layoutY="220.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="110.0" text="Help" />
-            <Button layoutX="10.0" layoutY="290.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="110.0" text="Close" />
+            <Button layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#closeApp" prefHeight="70.0" prefWidth="110.0" text="Close" />
          </children>
          <padding>
             <Insets top="90.0" />
