@@ -1,6 +1,12 @@
+plugins {
+    id "com.github.hierynomus.license" version "0.11.0"
+}
+
 apply from: "javafx.plugin"
 
 sourceCompatibility = 1.8
+
+defaultTasks 'clean', 'licenseFormat', 'check', 'build', 'run'
 
 group = "com.tealcube.java.cnu"
 archivesBaseName = "cpsc425finalproject"
@@ -8,6 +14,15 @@ version = "0.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
+}
+
+license {
+    header file('HEADER')
+    ignoreFailures false
+    strictCheck true
+    mapping {
+        java = 'SLASHSTAR_STYLE'
+    }
 }
 
 dependencies {
