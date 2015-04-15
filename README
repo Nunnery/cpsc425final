@@ -1,0 +1,22 @@
+##############
+# Scene Editor
+##############
+
+### What is Scene Editor?
+Scene Editor is a project written for CPSC 425 at Christopher Newport University.
+The goal of the assignment was to create a JavaFX application that displayed
+multiple objects in a 3D space.
+
+### How to Compile
+# Windows
+Simply double click "gradlew.bat" in the root directory or run it from Command Prompt.
+# *NIX (including Mac)
+Run "chmod +x && ./gradlew" in the root directory of this project.
+
+## How to Run
+# Windows and *NIX (including Mac)
+Running the above scripts will automatically compile the project and run it after
+it has successfully finished compiling. If you would like to see the project
+files without running the above scripts every time, you may find the resulting
+JAR files in the "build/javapackager-app" directory. The name of the executable
+JAR begins with cpsc425finalproject.
