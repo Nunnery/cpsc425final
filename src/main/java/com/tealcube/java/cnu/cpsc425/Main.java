@@ -18,6 +18,7 @@ import com.javafx.experiments.jfx3dviewer.Xform;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
@@ -72,10 +73,12 @@ public class Main extends Application {
 
         Scene scene = new Scene(base, 800, 600, true);
         scene.setFill(Color.ALICEBLUE);
+        scene.getStylesheets().add("DarkTheme.css");
         handleMouse(scene);
 
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
+        this.primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("pencil.png")));
         subScene.setCamera(camera);
 
         getLogger().debug("Application started");

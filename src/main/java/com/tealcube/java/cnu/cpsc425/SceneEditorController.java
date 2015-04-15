@@ -83,7 +83,7 @@ public class SceneEditorController {
         alert.setTitle("Help");
         alert.setHeaderText("Instructions");
         alert.setContentText("In order to rotate the editor, hold down the left mouse button and move your mouse.\n" +
-                "In order to translate (move in a direction) the editor, hold down the right mouse button and move your mouse.");
+                "In order to translate the editor, hold down the right mouse button and move your mouse.");
         alert.showAndWait();
     }
 

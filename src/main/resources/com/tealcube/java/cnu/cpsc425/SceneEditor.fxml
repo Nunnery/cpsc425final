@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tealcube.java.cnu.cpsc425.SceneEditorController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tealcube.java.cnu.cpsc425.SceneEditorController">
    <right>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="110.0" BorderPane.alignment="CENTER">
          <children>
@@ -16,9 +16,6 @@
             <Button layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#displayHelp" prefHeight="70.0" prefWidth="110.0" text="Help" />
             <Button layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#closeApp" prefHeight="70.0" prefWidth="110.0" text="Close" />
          </children>
-         <padding>
-            <Insets top="90.0" />
-         </padding>
       </VBox>
    </right>
 </BorderPane>
