@@ -9,10 +9,10 @@ public class SceneEditorController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SceneEditorController.class);
     private static final Random RANDOM = new Random();
-    private static final int MIN_X = -50;
-    private static final int MAX_X = 50;
-    private static final int MIN_Z = -50;
-    private static final int MAX_Z = 50;
+    private static final int MIN_X = -100;
+    private static final int MAX_X = 100;
+    private static final int MIN_Z = -100;
+    private static final int MAX_Z = 100;
     private MainApp mainApp;
 
     public SceneEditorController() {
