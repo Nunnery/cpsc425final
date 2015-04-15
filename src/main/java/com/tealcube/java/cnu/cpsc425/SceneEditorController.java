@@ -14,6 +14,7 @@
  */
 package com.tealcube.java.cnu.cpsc425;
 
+import javafx.scene.control.Alert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -74,6 +75,16 @@ public class SceneEditorController {
     public void closeApp() {
         getLogger().debug("Closing primary stage");
         getMain().getPrimaryStage().close();
+    }
+
+    public void displayHelp() {
+        getLogger().debug("Displaying help text");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Help");
+        alert.setHeaderText("Instructions");
+        alert.setContentText("In order to rotate the editor, hold down the left mouse button and move your mouse.\n" +
+                "In order to translate (move in a direction) the editor, hold down the right mouse button and move your mouse.");
+        alert.showAndWait();
     }
 
     public Main getMain() {
