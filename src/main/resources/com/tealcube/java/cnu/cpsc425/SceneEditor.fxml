@@ -9,8 +9,8 @@
    <right>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="110.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onMouseClicked="#addCar" prefHeight="70.0" prefWidth="110.0" text="Car" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#addHouse" prefHeight="70.0" prefWidth="110.0" text="House" />
+            <Button mnemonicParsing="false" onMouseClicked="#addCar" prefHeight="70.0" prefWidth="110.0" text="Add Car" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#addHouse" prefHeight="70.0" prefWidth="110.0" text=" Add House" />
             <Button layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#removeCar" prefHeight="70.0" prefWidth="110.0" text="Delete Car" />
             <Button layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#removeHouse" prefHeight="70.0" prefWidth="110.0" text="Delete House" />
             <Button layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#displayHelp" prefHeight="70.0" prefWidth="110.0" text="Help" />
