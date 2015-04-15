@@ -19,7 +19,7 @@
 }
 
 .button {
-    -fx-padding: 5 22 5 22;
+    -fx-padding: 5 5 5 5;
     -fx-border-color: #e2e2e2;
     -fx-border-width: 2;
     -fx-background-radius: 0;
