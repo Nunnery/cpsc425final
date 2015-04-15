@@ -30,6 +30,13 @@ public class SceneEditorController {
         getMainApp().getCarGroup().getChildren().add(new Car(x, 0, z));
     }
 
+    public void addHouse() {
+        int x = RANDOM.nextInt((MAX_X - MIN_X) + 1) + MIN_X;
+        int z = RANDOM.nextInt((MAX_Z - MIN_Z) + 1) + MIN_Z;
+        getLogger().debug("Adding house at " + x + ", 0, " + z);
+        getMainApp().getHouseGroup().getChildren().add(new House(x, 0, z));
+    }
+
     public void removeCar() {
         if (getMainApp().getCarGroup().getChildren().isEmpty()) {
             getLogger().debug("There are no cars to remove");
@@ -37,6 +44,15 @@ public class SceneEditorController {
         }
         getLogger().debug("Removing oldest car");
         getMainApp().getCarGroup().getChildren().remove(0);
+    }
+
+    public void removeHouse() {
+        if (getMainApp().getHouseGroup().getChildren().isEmpty()) {
+            getLogger().debug("There are no houses to remove");
+            return;
+        }
+        getLogger().debug("Removing oldest house");
+        getMainApp().getHouseGroup().getChildren().remove(0);
     }
 
     public void closeApp() {

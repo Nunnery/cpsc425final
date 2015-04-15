@@ -22,7 +22,7 @@ public class MainApp extends Application {
     private final Group axisGroup = new Group();
     private final Xform world = new Xform();
     private final Xform carGroup = new Xform();
-    private final Xform worldGroup = new Xform();
+    private final Xform houseGroup = new Xform();
     private final PerspectiveCamera camera = new PerspectiveCamera(true);
     private final Xform cameraXform = new Xform();
     private final Xform cameraXform2 = new Xform();
@@ -56,9 +56,10 @@ public class MainApp extends Application {
         buildCamera();
         buildAxes();
         buildCars();
+        buildHouses();
 
         Scene scene = new Scene(base, 800, 600, true);
-        scene.setFill(Color.GREY);
+        scene.setFill(Color.ALICEBLUE);
 
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
@@ -71,6 +72,12 @@ public class MainApp extends Application {
         getLogger().debug("Building cars");
         world.getChildren().add(carGroup);
         getLogger().debug("Cars built");
+    }
+
+    private void buildHouses() {
+        getLogger().debug("Building houses");
+        world.getChildren().add(houseGroup);
+        getLogger().debug("Houses built");
     }
 
     private void buildScene() {
@@ -128,6 +135,10 @@ public class MainApp extends Application {
 
     public Xform getCarGroup() {
         return carGroup;
+    }
+
+    public Xform getHouseGroup() {
+        return houseGroup;
     }
 
 }
