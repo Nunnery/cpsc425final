@@ -25,16 +25,18 @@ public class SceneEditorController {
 
     public void addCar() {
         int x = RANDOM.nextInt((MAX_X - MIN_X) + 1) + MIN_X;
+        int y = 15;
         int z = RANDOM.nextInt((MAX_Z - MIN_Z) + 1) + MIN_Z;
-        getLogger().debug("Adding car at " + x + ", 0, " + z);
-        getMain().getCarGroup().getChildren().add(new Car(x, 0, z));
+        getLogger().debug("Adding car at " + x + ", " + y + ", " + z);
+        getMain().getCarGroup().getChildren().add(new Car(x, y, z));
     }
 
     public void addHouse() {
         int x = RANDOM.nextInt((MAX_X - MIN_X) + 1) + MIN_X;
+        int y = 40;
         int z = RANDOM.nextInt((MAX_Z - MIN_Z) + 1) + MIN_Z;
-        getLogger().debug("Adding house at " + x + ", 0, " + z);
-        getMain().getHouseGroup().getChildren().add(new House(x, 0, z));
+        getLogger().debug("Adding house at " + x + ", " + y + ", " + z);
+        getMain().getHouseGroup().getChildren().add(new House(x, y, z));
     }
 
     public void removeCar() {
